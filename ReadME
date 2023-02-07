@@ -1,0 +1,39 @@
+#################################################
+##### Dependencies:
+#################################################
+
+1): pip install flask
+2): pip install Flask-RESTful
+
+
+################################################
+##### How to run
+################################################
+
+1): Initialize the database: --> (this will create the database and insert some dummy data....)
+	
+	Run in terminal > python init_db.py
+
+2): Run the app and start interacting with API.
+	
+	Run in terminal > python app_2_best.py
+	
+	
+	Working:
+	========
+	
+	> Copy & Paste the following line in your browser: ==> http://127.0.0.1:5000/
+		The output should be: ==> All Ok!
+	
+	> Read data using URL:
+		> http://127.0.0.1:5000/polygons
+	
+	> Read specific polygon from URL:
+		> http://127.0.0.1:5000/polygons/1
+	
+	> Insert, Edit, Or delete polygon data using URL: 
+		> if method=="PUT"    ==> the record will be updated
+		> if method=="GET"    ==> get the specific polygon
+		> if method=="DELETE" ==> delete the specific polygon.
+
+####################################################
