@@ -42,7 +42,7 @@ def main():
         conn.commit()
     else:
         print("Error! Cannot create the database connection.")
-
+ 
 if __name__ == '__main__':
     main()
 

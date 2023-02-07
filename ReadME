@@ -2,8 +2,12 @@
 ##### Dependencies:
 #################################################
 
+
+	<Try with pip or pip3>
+
 1): pip install flask
 2): pip install Flask-RESTful
+3): pip install flask flask-cors
 
 
 ################################################

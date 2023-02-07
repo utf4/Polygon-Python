@@ -1,13 +1,17 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
 import sqlite3
 
 app = Flask(__name__)
+CORS(app, support_credentials=True)
 
 @app.route('/')
+@cross_origin(origin="*",supports_credentials=True)
 def hello_world():
 	return "All OK!"
 
 @app.route("/polygons", methods=["GET", "POST"])
+@cross_origin(origin="*",supports_credentials=True)
 def polyggon_handler():
     if request.method == "GET":
         polygs = get_all_polygons()
@@ -18,6 +22,7 @@ def polyggon_handler():
         return "OK", 201
 
 @app.route("/polygons/<int:poly_id>", methods=["GET", "PUT", "DELETE"])
+@cross_origin(origin="*",supports_credentials=True)
 def single_polygon_handler(poly_id):
     if request.method == "GET":
         poly = get_polygon(poly_id)
